@@ -143,8 +143,8 @@ body {
 /* my code */
 .container {
   max-width: 800px;
-  border: 0.1rem solid yellow;
   margin: 0rem auto;
+  font-family: Arial, Helvetica, sans-serif;
 }
 header {
   display: flex;
@@ -170,7 +170,6 @@ section {
 }
 .top-container h1 {
   font-size: 5rem;
-  font-family: Arial, Helvetica, sans-serif;
 }
 .top-container h2 {
   font-size: 2rem;
@@ -197,4 +196,74 @@ section {
   margin-bottom: 5rem;
   font-size: 2rem;
   border-radius: 0.5rem;
+}
+.mid-content {
+  display: flex;
+}
+.left-container {
+  width: 50%;
+}
+.left-container h2 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+.left-container p {
+  line-height: 2rem;
+  padding: 1rem 1rem 4rem 0rem;
+}
+.right-container {
+  width: 50%;
+}
+.right-container h3 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+.right-container ul {
+  margin-top: 1rem;
+}
+.right-container li {
+  padding: 1rem;
+  border: 0.1rem solid #efe9ec;
+}
+.bottom-container h3 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+.bottom-container table {
+  width: 100%;
+}
+.bottom-container table th {
+  text-align: left;
+  font-weight: bold;
+}
+.bottom-container table th,
+.bottom-container table td {
+  padding: 1rem 0rem 1rem 0rem;
+}
+.bottom-container table tr {
+  border: 0.1rem solid #ddd;
+  border-left: none;
+  border-right: none;
+  padding-left: 2rem;
+}
+.bottom-container table tr:nth-child(even) {
+  background-color: #ddd;
+}
+.bottom-container table .row {
+  padding-left: 1rem;
+  font-weight: bold;
+}
+footer {
+  margin-top: 3rem;
+  background-color: #757575;
+  color: white;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+footer p {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 2rem 0 4rem 0;
 }
