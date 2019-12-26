@@ -92,12 +92,16 @@ section {
 	background-color: rgb(239,233,236);
 }
 
+.mixin1 {
+	display: flex;
+	flex-wrap: wrap;
+}
+
 // Nesting
 .top-container {
 	margin: 5rem;
-	display: flex;
+	.mixin1();
 	flex-direction: column;
-	flex-wrap: wrap;
 
 	h1 {
 		font-size: 5rem;
@@ -135,6 +139,10 @@ section {
 
 .mid-content{
 	display: flex;
+
+	@media (max-width: 500px) {
+		flex-wrap: wrap;
+	}
 }
 
 .left-container {
@@ -149,14 +157,23 @@ section {
 		line-height: 2rem;
 		padding: 1rem 1rem 4rem 0rem;
 	}
+
+	@media (max-width:500px) {
+		width: 100%;
+		// display: inline-block;
+	}
+}
+
+.mixin2 {
+	font-size: 2rem;
+	font-weight: bold;
 }
 
 .right-container {
 	width: 50%;
 
 	h3 {
-		font-size: 2rem;
-		font-weight: bold;
+		.mixin2();
 	}
 
 	ul {
@@ -166,12 +183,16 @@ section {
 		padding: 1rem;
 		border: 0.1rem solid rgb(239,233,236);
 	}
+
+	@media (max-width:500px) {
+		width: 100%;
+		margin-bottom: 2rem;
+	}
 }
 
 .bottom-container {
 	h3 {
-		font-size: 2rem;
-		font-weight: bold;
+		.mixin2();
 		margin-bottom: 1rem;
 	}
 

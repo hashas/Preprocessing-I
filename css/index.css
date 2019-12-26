@@ -162,11 +162,15 @@ nav a {
 section {
   background-color: #efe9ec;
 }
+.mixin1 {
+  display: flex;
+  flex-wrap: wrap;
+}
 .top-container {
   margin: 5rem;
   display: flex;
-  flex-direction: column;
   flex-wrap: wrap;
+  flex-direction: column;
 }
 .top-container h1 {
   font-size: 5rem;
@@ -200,6 +204,11 @@ section {
 .mid-content {
   display: flex;
 }
+@media (max-width: 500px) {
+  .mid-content {
+    flex-wrap: wrap;
+  }
+}
 .left-container {
   width: 50%;
 }
@@ -210,6 +219,15 @@ section {
 .left-container p {
   line-height: 2rem;
   padding: 1rem 1rem 4rem 0rem;
+}
+@media (max-width: 500px) {
+  .left-container {
+    width: 100%;
+  }
+}
+.mixin2 {
+  font-size: 2rem;
+  font-weight: bold;
 }
 .right-container {
   width: 50%;
@@ -224,6 +242,12 @@ section {
 .right-container li {
   padding: 1rem;
   border: 0.1rem solid #efe9ec;
+}
+@media (max-width: 500px) {
+  .right-container {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
 }
 .bottom-container h3 {
   font-size: 2rem;
