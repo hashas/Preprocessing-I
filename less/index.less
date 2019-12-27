@@ -54,6 +54,188 @@ table {
 }
 
 html, body {
-    height: 100%;
+	height: 100%;
 }
 
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-size: 1.6rem;
+}
+/* my code */
+
+.container {
+	max-width: 800px;
+	margin: 0rem auto;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	height: 50px;
+}
+
+nav {
+	display:flex;
+}
+
+nav a {
+	text-decoration: none;
+	width: 8rem;
+}
+
+section {
+	background-color: rgb(239,233,236);
+}
+
+.mixin1 {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+// Nesting
+.top-container {
+	margin: 5rem;
+	.mixin1();
+	flex-direction: column;
+
+	h1 {
+		font-size: 5rem;
+	}
+
+	h2 {
+		font-size: 2rem;
+		margin-top: 2rem;
+	}
+
+	img {
+		margin-top: 5rem;
+		width: 20rem;
+		height: 20rem;
+	}
+
+	hr {
+		color:rgb(221,225,228);
+		border-width: 0.1rem;
+		margin: 2rem auto;
+		border-style: solid;
+		width: 100%;
+	}
+	button {
+		background-color: rgb(117,117,117);
+		color: white;
+		width: 15rem;
+		height: 4rem;
+		margin-top: 2rem;
+		margin-bottom: 5rem;
+		font-size: 2rem;
+		border-radius: 0.5rem;
+	}
+}
+
+.mid-content{
+	display: flex;
+
+	@media (max-width: 500px) {
+		flex-wrap: wrap;
+	}
+}
+
+.left-container {
+	width: 50%;
+
+	h2 {
+		font-size: 3rem;
+		font-weight: bold;
+	}
+
+	p {
+		line-height: 2rem;
+		padding: 1rem 1rem 4rem 0rem;
+	}
+
+	@media (max-width:500px) {
+		width: 100%;
+		// display: inline-block;
+	}
+}
+
+.mixin2 {
+	font-size: 2rem;
+	font-weight: bold;
+}
+
+.right-container {
+	width: 50%;
+
+	h3 {
+		.mixin2();
+	}
+
+	ul {
+		margin-top: 1rem;
+	}
+	li {
+		padding: 1rem;
+		border: 0.1rem solid rgb(239,233,236);
+	}
+
+	@media (max-width:500px) {
+		width: 100%;
+		margin-bottom: 2rem;
+	}
+}
+
+.bottom-container {
+	h3 {
+		.mixin2();
+		margin-bottom: 1rem;
+	}
+
+	table {
+		width: 100%;
+
+			th {
+				text-align: left;
+				font-weight: bold;
+			}
+
+			th, td {
+				padding: 1rem 0rem 1rem 0rem;
+			}
+			
+			tr {
+				border: 0.1rem solid #ddd;
+				border-left: none;
+				border-right: none;
+				padding-left: 2rem;
+			}
+			tr:nth-child(even) {
+				background-color: #ddd;
+			}
+
+			.row {
+				padding-left: 1rem;
+				font-weight: bold;
+			}
+	}
+}
+
+footer {
+	margin-top: 3rem;
+	background-color: rgb(117,117,117);
+	color: white;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+
+		p {
+			font-size: 1.5rem;
+			font-weight: bold;
+			padding: 2rem 0 4rem 0;
+		}
+}

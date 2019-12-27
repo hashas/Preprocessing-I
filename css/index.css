@@ -1,1 +1,293 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.6rem;
+}
+/* my code */
+.container {
+  max-width: 800px;
+  margin: 0rem auto;
+  font-family: Arial, Helvetica, sans-serif;
+}
+header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 50px;
+}
+nav {
+  display: flex;
+}
+nav a {
+  text-decoration: none;
+  width: 8rem;
+}
+section {
+  background-color: #efe9ec;
+}
+.mixin1 {
+  display: flex;
+  flex-wrap: wrap;
+}
+.top-container {
+  margin: 5rem;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+.top-container h1 {
+  font-size: 5rem;
+}
+.top-container h2 {
+  font-size: 2rem;
+  margin-top: 2rem;
+}
+.top-container img {
+  margin-top: 5rem;
+  width: 20rem;
+  height: 20rem;
+}
+.top-container hr {
+  color: #dde1e4;
+  border-width: 0.1rem;
+  margin: 2rem auto;
+  border-style: solid;
+  width: 100%;
+}
+.top-container button {
+  background-color: #757575;
+  color: white;
+  width: 15rem;
+  height: 4rem;
+  margin-top: 2rem;
+  margin-bottom: 5rem;
+  font-size: 2rem;
+  border-radius: 0.5rem;
+}
+.mid-content {
+  display: flex;
+}
+@media (max-width: 500px) {
+  .mid-content {
+    flex-wrap: wrap;
+  }
+}
+.left-container {
+  width: 50%;
+}
+.left-container h2 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+.left-container p {
+  line-height: 2rem;
+  padding: 1rem 1rem 4rem 0rem;
+}
+@media (max-width: 500px) {
+  .left-container {
+    width: 100%;
+  }
+}
+.mixin2 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+.right-container {
+  width: 50%;
+}
+.right-container h3 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+.right-container ul {
+  margin-top: 1rem;
+}
+.right-container li {
+  padding: 1rem;
+  border: 0.1rem solid #efe9ec;
+}
+@media (max-width: 500px) {
+  .right-container {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+}
+.bottom-container h3 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+.bottom-container table {
+  width: 100%;
+}
+.bottom-container table th {
+  text-align: left;
+  font-weight: bold;
+}
+.bottom-container table th,
+.bottom-container table td {
+  padding: 1rem 0rem 1rem 0rem;
+}
+.bottom-container table tr {
+  border: 0.1rem solid #ddd;
+  border-left: none;
+  border-right: none;
+  padding-left: 2rem;
+}
+.bottom-container table tr:nth-child(even) {
+  background-color: #ddd;
+}
+.bottom-container table .row {
+  padding-left: 1rem;
+  font-weight: bold;
+}
+footer {
+  margin-top: 3rem;
+  background-color: #757575;
+  color: white;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+footer p {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 2rem 0 4rem 0;
+}
